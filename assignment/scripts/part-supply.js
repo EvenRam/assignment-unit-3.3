@@ -21,7 +21,7 @@ console.log(supplyChanges);
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
 console.log('3. Access the second value of supplyChanges:');
-let  secondItem = supplyChanges[1];
+let secondItem = supplyChanges[1];
 console.log(secondItem);
 
 
@@ -52,21 +52,21 @@ let positives = [];
 let negatives = [];
 let zeroes = [];
 
-for( let i = 0; i < supplyChanges.length; i++){
+for (let i = 0; i < supplyChanges.length; i++) {
 
-  if( supplyChanges[i] > 0){
-  positives.push(supplyChanges[i]);
+  if (supplyChanges[i] > 0) {
+    positives.push(supplyChanges[i]);
   }
-    if( supplyChanges[i] < 0){
+  if (supplyChanges[i] < 0) {
     negatives.push(supplyChanges[i]);
   }
-  if( supplyChanges [i] === 0){
+  if (supplyChanges[i] === 0) {
     zeroes.push(supplyChanges[i]);
 
   }
 }
-  
-console.log(positives,negatives,zeroes);
+
+console.log(positives, negatives, zeroes);
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
@@ -74,11 +74,51 @@ console.log(positives,negatives,zeroes);
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
 
+let stretchPositives = [];
+let stretchNegatives = [];
+let stretchZeroes = [];
+
+console.log("supplechanges", supplyChanges);
+
+for (let v of supplyChanges) {
+
+  console.log("index of supplechanges", v);
+
+  if (v > 0) {
+    stretchPositives.push(v);
+  }
+  else if (v < 0) {
+    stretchNegatives.push(v);
+  }
+  else if (v === 0) {
+    stretchZeroes.push(v);
+
+  }
+
+}
+
+console.log("stretchPositives", stretchPositives);
+console.log("stretchNegatives", stretchNegatives);
+console.log("stretchZeroes ", stretchZeroes);
+
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
+
+
+let totalParts = 0;
+let sum = 0;
+
+for( let item = 0; item < supplyChanges.length; item++){
+  totalParts = sum += supplyChanges[item];
+
+  console.log("what is the sum " , sum);
+  console.log(supplyChanges);
+
+}
+
 
 
 // 9. We have a large stash of parts in our warehouse that we 
@@ -92,8 +132,10 @@ console.log('8. Looping through supplyChanges to calculate the sum:');
 //    the value of 'parts' should reflect how many parts are
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
-console.log('9. Filling boxes with a "while" loop');
-
+//console.log('9. Filling boxes with a "while" loop');
+ 
+let parts = 572;
+let boxesFilled = 0;
 
 
 
