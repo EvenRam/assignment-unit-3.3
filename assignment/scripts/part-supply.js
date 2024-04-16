@@ -111,10 +111,10 @@ console.log('8. Looping through supplyChanges to calculate the sum:');
 let totalParts = 0;
 let sum = 0;
 
-for( let item = 0; item < supplyChanges.length; item++){
+for (let item = 0; item < supplyChanges.length; item++) {
   totalParts = sum += supplyChanges[item];
 
-  console.log("what is the sum " , sum);
+  console.log("what is the sum ", sum);
   console.log(supplyChanges);
 
 }
@@ -133,9 +133,38 @@ for( let item = 0; item < supplyChanges.length; item++){
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 //console.log('9. Filling boxes with a "while" loop');
- 
+
 let parts = 572;
 let boxesFilled = 0;
+let numberOfPartsInBox = 0;
+
+while (parts > 0) {
+  parts--;
+  numberOfPartsInBox++;
+  //console.log("parts",parts);
+  //console.log("numberOFPartsInBox",numberOfPartsInBox);
+
+  // check if the number of parts is less than 7 and if parts is less than 7  than return
+  if (parts < 7) {
+    console.log("remaining parts", parts)
+    break
+  }
+
+  // if the number of parts reaches 7 that means a box has been filled. 
+  // inside of the if stATEMENT we need to add 1 to boxesFilled and have to reset the number of boxes to 0 
+
+  if (numberOfPartsInBox === 7) {
+    console.log("a boxed has been filed");
+    boxesFilled++;
+    console.log("boxFilled", boxesFilled);
+    numberOfPartsInBox = 0;
+  }
+
+}
+
+console.log("parts remaining", parts);
+console.log("amount in boxFilled", boxesFilled);
+
 
 
 
